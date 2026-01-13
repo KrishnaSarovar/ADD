@@ -7,7 +7,7 @@ st.title("📥 Download File")
 
 github_raw_url = st.text_input(
     "Enter GitHub RAW Python file URL",
-    "https://raw.githubusercontent.com/KrishnaSarovar/ADD/main/DAA.py"
+    "https://raw.githubusercontent.com/KrishnaSarovar/ADD/main/wt.html"
 )
 
 if st.button("Fetch File"):
@@ -28,4 +28,5 @@ if st.button("Fetch File"):
 
     except Exception as e:
         st.error(f"Error fetching file: {e}")
+
 
