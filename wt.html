@@ -1,0 +1,631 @@
+<!DOCTYPE html> 1.Resume
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>My Resume</title> 
+    <style> 
+        h1, 
+        h2 { 
+            background: lightgray; 
+            padding: 10px; 
+            color: black;  } 
+        table { 
+            border-collapse: collapse; 
+            width: 80%;   } 
+        table, 
+        th, 
+        td { 
+            border: 2px solid black;     } 
+        th, 
+        td { 
+            padding: 10px; 
+            text-align: center;    } 
+    </style> 
+</head> 
+<body> 
+    <h1 align="center">My Resume</h1> 
+    <h2>Personal Information</h2> 
+    <h3>Krishna Mansaram Sarovar</h3> 
+    <p>Email: sonawanemvaishnavi031@gmail.com</p> 
+    <p>Phone: +91 7498891286</p> 
+    <hr> 
+    <h2>Career Objective</h2> 
+    <p>To work in a challenging environment where I can use my skills and grow 
+professionally.</p> 
+    <h2>Education</h2> 
+    <table> 
+        <tr> 
+            <th>Educational Qualification</th> 
+            <th>Marks</th> 
+            <th>Institute Name</th> 
+            <th>Passing Year</th> 
+        </tr> 
+        <tr> 
+            <td>BBA(CA)</td> 
+            <td>76.57%</td> 
+            <td>Bytco college nashik road</td> 
+            <td>2025</td>  </tr> 
+        <tr> 
+            <td>HSC</td> 
+            <td>76%</td> 
+            <td>Nutan vidhya mandir</td> 
+            <td>2022</td> 
+        </tr> 
+        <tr> 
+            <td>SSC</td> 
+            <td>83%</td> 
+            <td>shant janardhan swami nagar palse</td> 
+            <td>2020</td> 
+        </tr> 
+    </table> 
+    <h2>Skills</h2>   <ul> 
+        <li>HTML, CSS, JavaScript</li> 
+        <li>Python, C Programming</li> 
+        <li>MS Office</li>   </ul> 
+    <h2>Declaration</h2> 
+    <p>I hereby declare that the above information is true to the best of my knowledge and 
+belief.</p> 
+    <h2>Hobbies</h2> 
+    <ul> 
+        <li>Reading</li> 
+        <li>Traveling</li> 
+    </ul> 
+</body> 
+</html>
+
+_______________________________________________________________________________________________________
+<!DOCTYPE html> 2. Divided Page
+<html>
+<head>
+    <title>Frameset Example</title>
+</head>
+
+<frameset cols="50%,50%">
+    <frame src="left.html" name="leftFrame">
+
+    <frameset rows="50%,50%">
+        <frame src="top.html" name="topRight">
+        <frame src="bottom.html" name="bottomRight">
+    </frameset>
+</frameset>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+</head>
+
+<body bgcolor="#e0e0e0">
+    <h3>Choose Content:</h3>
+
+    <a href="https://www.flipkart.com/" target="topRight">
+        Load Top Frame
+    </a>
+    <br><br>
+
+    <a href="a3.html" target="bottomRight">
+        Load Bottom Frame
+    </a>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Frame</title>
+</head>
+
+<body bgcolor="#d0f0ff">
+    <h2>Welcome to the Top Frame</h2>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bottom Frame</title>
+</head>
+
+<body bgcolor="#ffd0d0">
+    <h2>Welcome to the Bottom Frame</h2>
+</body>
+</html>
+
+_______________________________________________________________________________________________________
+3. Multiplication Calculator
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Calculator</title>
+    <script>
+        function multiplyNumbers() {
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var result = Number(num1) * Number(num2);
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</head>
+<body>
+<h2>Multiplication Calculator</h2>
+<p>Enter two numbers to multiply:</p>
+Number 1: <input type="number" id="num1"><br><br>
+Number 2: <input type="number" id="num2"><br><br>
+<button onclick="multiplyNumbers()">Multiply</button>
+<p id="result"></p>
+</body>
+</html>
+_______________________________________________________________________________________________________
+4. Login Form
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Login Form</title> 
+</head> 
+<body> 
+    <form name="form1" onsubmit="return formValidate()"> 
+        <h1>LOGIN FORM</h1> 
+        <label>Username:</label><br> 
+        <input type="text" name="T1" placeholder="Enter your full Name"><br><br> 
+        <label>Number:</label><br> 
+        <input type="text" name="T2" placeholder="Enter your number"><br><br> 
+        <label>Age:</label><br> 
+        <input type="text" name="T3" placeholder="Enter your Age"><br><br> 
+        <label>Email:</label><br> 
+        <input type="text" name="T4" placeholder="Enter your email"><br><br> 
+ 
+        <label>Gender:</label><br> 
+        <input type="radio" name="gender" value="Male">Male 
+        <input type="radio" name="gender" value="Female">Female 
+        <input type="radio" name="gender" value="Other">Other<br><br> 
+        <input type="submit" value="Login"> 
+    </form> 
+    <script> 
+        function formValidate() { 
+            var fname = document.form1.T1.value; 
+            var phone = document.form1.T2.value; 
+            var age = document.form1.T3.value; 
+            var email1 = document.form1.T4.value; 
+            var isValid = true; 
+            // Full Name Check 
+            if (fname.trim() === "" || fname.indexOf(' ') === -1) { 
+                alert("Name cannot be empty and must contain your full name."); 
+                isValid = false; 
+            } 
+            // Mobile Number Check 
+            if (phone.length !== 10 || isNaN(phone)) { 
+                alert("Mobile number must contain exactly 10 digits."); 
+                isValid = false; 
+            } 
+            // Age Check 
+            if (isNaN(age) || age < 0 || age > 100) { 
+                alert("Age must be a number between 0 and 100."); 
+                isValid = false; 
+            } 
+            // Email Check 
+            var at = email1.indexOf('@'); 
+            var dot = email1.lastIndexOf('.'); 
+            if (at < 1 || dot < at + 2 || dot + 2 >= email1.length) { 
+                alert("Incorrect email format. Example: example@gmail.com"); 
+                isValid = false; 
+            } 
+            if (isValid) { 
+                alert("Login Successfully"); 
+            } 
+            return isValid; 
+        } 
+    </script> 
+</body> 
+</html>
+_______________________________________________________________________________________________________
+5.JavaScript DOM (Document Object Model) manipulation.
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>JavaScript DOM Manipulation Demo</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 30px; 
+            background: #f4f4f4; } 
+        h1 { 
+            color: #333;         } 
+        #container { 
+            padding: 20px; 
+            background: white; 
+            border-radius: 8px; 
+            box-shadow: 0 0 5px rgba(0,0,0,0.2); 
+            margin-bottom: 20px;          } 
+        button { 
+            margin: 10px 5px; S
+            padding: 10px 15px; 
+            font-size: 16px; 
+            cursor: pointer; } 
+        .item { 
+            margin: 5px 0; 
+            padding: 10px; 
+            background: #e9e9ff; 
+            border-radius: 5px;  } 
+    </style> 
+</head> 
+<body> 
+    <h1>JavaScript DOM Manipulation Example</h1> 
+    <div id="container"> 
+        <p id="message">This text will change using JavaScript.</p> 
+    </div> 
+    <!-- Buttons --> 
+    <button onclick="changeText()">Change Text</button> 
+    <button onclick="addElement()">Add New Element</button> 
+    <button onclick="removeElement()">Remove Last Element</button> 
+    <button onclick="changeColor()">Change Background Color</button> 
+    <script> 
+        const container = document.getElementById("container"); 
+             function changeText() { 
+            document.getElementById("message").innerText = "The text has been updated!"; } 
+        function addElement() { 
+            const newItem = document.createElement("div"); 
+            newItem.className = "item"; 
+            newItem.innerText = "New  element added."; 
+            container.appendChild(newItem);  } 
+    
+        function removeElement() { 
+            const items = document.querySelectorAll(".item"); 
+            if (items.length > 0) { 
+                items[items.length - 1].remove(); 
+            } else { 
+                alert("No elements left to remove!");  }  } 
+        function changeColor() { 
+            container.style.background =  
+                container.style.background === "lightyellow" ? "white" : 
+"lightyellow";    } 
+    </script> 
+</body> 
+</html> 
+_______________________________________________________________________________
+6. AJAX (Asynchronous JavaScript and XML) to retrieve and display the contents of a text file (data.txt)
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial
+scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+    <h3>Ajex Example</h3> 
+    <button onclick="loadData()">Load Data</button> 
+    <p id="output"></p> 
+    <script> 
+        function loadData() 
+        { 
+            var xhr=new XMLHttpRequest(); 
+            xhr.open("GET","data.txt",true); 
+            xhr.onload = function(){ 
+                document.getElementById("output").innerHTML=xhr.responseText; 
+            }; 
+            xhr.send(); 
+        } 
+</script> 
+</body> 
+</html>
+_______________________________________________________________________________________________________
+7. AJAX (Asynchronous JavaScript and XML) to retrieve and display the contents of a XML file
+A7.html
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Student Data</title> 
+</head> 
+<body> 
+ 
+    <h3>Student Data</h3> 
+    <button onclick="loadStudent()">Load Student Data</button> 
+    <div id="output"></div> 
+ 
+    <script src="script.js"></script> 
+</body> 
+</html>
+Script.js
+function loadStudent(){  
+ let xhr = new XMLHttpRequest(); 
+  xhr.open("GET", "student.xml", true); 
+  xhr.onload = function () {   if (xhr.status === 200) { showStudent(xhr);        } 
+    }; 
+ 
+ xhr.send(); 
+} 
+ 
+function showStudent(xml) { 
+    let s = xml.responseXML.getElementsByTagName("student"); 
+    let out = "<h3>Student List</h3>"; 
+ 
+    for (let i = 0; i < s.length; i++) { 
+        let name = s[i].getElementsByTagName("name")[0].textContent; 
+        let grade = s[i].getElementsByTagName("grade")[0].textContent; 
+        let roll = s[i].getElementsByTagName("roll")[0].textContent; 
+ 
+        out += "<p>Name: " + name + 
+               "<br>Grade: " + grade + 
+               "<br>Roll: " + roll + "</p>"; 
+    } 
+ 
+    document.getElementById("output").innerHTML = out; 
+}
+Student.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <name>vaishnavi sonawane</name>
+        <roll>6</roll>
+        <grade>A+</grade>
+    </student>
+
+    <student>
+        <name>nishad shaikh</name>
+        <roll>7</roll>
+        <grade>A</grade>
+    </student>
+</students>
+_______________________________________________________________________________________________________
+8. Build an XML file containing student records and write a program to extract and query specific data from it
+student.xml
+<?xml version="1.1" encoding="UTF-8"?> 
+<Students> 
+<student> 
+<roll>1</roll> 
+<name>Devidas</name> 
+<class>FYMCA</class> 
+<Mark>90</Mark> 
+<result>Pass</result> 
+</student> 
+<student> 
+<roll>2</roll> 
+<name>Durgesh</name> 
+<class>BSC</class> 
+<Mark>84</Mark> 
+<result>Pass</result> 
+</student> 
+<student> 
+<roll>3</roll> 
+<name>Umesh</name> 
+<class>BSC-IT</class> 
+<Mark>25</Mark> 
+<result>Fail</result> 
+</student>
+<student> 
+<roll>4</roll> 
+<name>swanand</name> 
+<class>BCS</class> 
+<Mark>15</Mark> 
+<result>Fail</result> 
+</student> 
+<student> 
+<roll>5</roll> 
+<name>Vedant</name> 
+<class>Engineering</class> 
+<Mark>80</Mark> 
+<result>Pass</result> 
+</student> 
+<student> 
+<roll>6</roll> 
+<name>sarvesh</name> 
+<class>M.tech</class> 
+<Mark>30</Mark> 
+<result>Fail</result> 
+</student> 
+</Students>
+
+1.	Display records of all students:- 
+for $i in doc("student.xml")/Students/student
+ return $i 
+
+3.	Display all record result pass and fail
+ for $i in doc("student.xml")/Students/student/result 
+return $i
+4.	Display reverse name 
+for $i in reverse(doc("student.xml")/Students/student/name) 
+return $i 
+7.	Display heights mark student name 
+for $i in doc("student.xml")/Students/student 
+where $i/Mark>50
+ return $i/name 
+8.	display records whose marks are in between 50&90 
+for $i in doc("student.xml")/Students/student 
+where $i/Mark>35 and $i/Mark 90
+
+_______________________________________________________________________________
+9.Implement a hit Counter using a file in PHP.
+Hitcounter.php
+<?php
+// File to store hit count
+$filename = "counter.txt";
+
+// If file does not exist, create it and set count to 0
+if (!file_exists($filename)) {
+    file_put_contents($filename, "0");
+}
+
+// Read current count
+$count = file_get_contents($filename);
+
+// Increment count
+$count = $count + 1;
+
+// Write updated count back to file
+file_put_contents($filename, $count);
+
+echo "<h2>Page Hit Counter</h2>";
+echo "<p>This page has been visited <b>$count</b> times.</p>";
+?>
+
+Counter.txt
+0
+_______________________________________________________________________________
+10. Develop a dynamic web application using PHP and MySQL
+db.php
+<?php
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "school";
+
+$conn = new mysqli($host, $username, $password, $database, 3307);
+
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+Index.php
+<?php
+include("db.php");
+
+if (isset($_POST['add'])) {
+    $name = $_POST['name'];
+    $mobile = $_POST['mobile'];
+    $email = $_POST['email'];
+    $branch = $_POST['branch'];
+
+    $conn->query("INSERT INTO students (name, mobile, email, branch)
+                  VALUES ('$name','$mobile','$email','$branch')");
+}
+
+if (isset($_GET['delete'])) {
+    $id = $_GET['delete'];
+    $conn->query("DELETE FROM students WHERE id=$id");
+}
+
+if (isset($_POST['update'])) {
+    $id = $_POST['id'];
+    $name = $_POST['name'];
+    $mobile = $_POST['mobile'];
+    $email = $_POST['email'];
+    $branch = $_POST['branch'];
+
+    $conn->query("UPDATE students SET
+                  name='$name', mobile='$mobile', email='$email', branch='$branch'
+                  WHERE id=$id");
+}
+
+$editData = null;
+if (isset($_GET['edit'])) {
+    $id = $_GET['edit'];
+    $editData = $conn->query("SELECT * FROM students WHERE id=$id")->fetch_assoc();
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student CRUD</title>
+</head>
+<body>
+
+<h2>Student CRUD Application</h2>
+
+<form method="post">
+    <input type="hidden" name="id" value="<?php echo $editData['id'] ?? ''; ?>">
+
+    Name: <input type="text" name="name" value="<?php echo $editData['name'] ?? ''; ?>" required><br><br>
+    Mobile: <input type="text" name="mobile" value="<?php echo $editData['mobile'] ?? ''; ?>" required><br><br>
+    Email: <input type="email" name="email" value="<?php echo $editData['email'] ?? ''; ?>" required><br><br>
+    Branch: <input type="text" name="branch" value="<?php echo $editData['branch'] ?? ''; ?>" required><br><br>
+
+    <?php if ($editData) { ?>
+        <button type="submit" name="update">Update</button>
+    <?php } else { ?>
+        <button type="submit" name="add">Add</button>
+    <?php } ?>
+</form>
+
+<hr>
+
+<table border="1" cellpadding="5">
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Mobile</th>
+    <th>Email</th>
+    <th>Branch</th>
+    <th>Action</th>
+</tr>
+
+<?php
+$result = $conn->query("SELECT * FROM students");
+while ($row = $result->fetch_assoc()) {
+?>
+<tr>
+    <td><?php echo $row['id']; ?></td>
+    <td><?php echo $row['name']; ?></td>
+    <td><?php echo $row['mobile']; ?></td>
+    <td><?php echo $row['email']; ?></td>
+    <td><?php echo $row['branch']; ?></td>
+    <td>
+        <a href="?edit=<?php echo $row['id']; ?>">Edit</a> |
+        <a href="?delete=<?php echo $row['id']; ?>">Delete</a>
+    </td>
+</tr>
+<?php } ?>
+
+</table>
+
+</body>
+</html>
+_______________________________________________________________________________
+11. Write a program in PHP to display data and records of tables which is already existing in mysql database
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "school";
+$port = 3307;   // your MySQL port
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname, $port);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch data from students table
+$sql = "SELECT * FROM students";
+$result = $conn->query($sql);
+
+// Display records
+if ($result->num_rows > 0) {
+    echo "<h2>Student Records</h2>";
+    echo "<table border='1' cellpadding='10'>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>Branch</th>
+            </tr>";
+
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr>
+                <td>".$row['id']."</td>
+                <td>".$row['name']."</td>
+                <td>".$row['mobile']."</td>
+                <td>".$row['email']."</td>
+                <td>".$row['branch']."</td>
+              </tr>";
+    }
+    echo "</table>";
+} else {
+    echo "No records found";
+}
+
+$conn->close();
+?>
+
+
+
